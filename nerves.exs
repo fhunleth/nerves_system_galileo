@@ -8,7 +8,7 @@ version =
 config :nerves_system_galileo, :nerves_env,
   type: :system,
   mirrors: [
-    "https://github.com/nerves-project/nerves_system_br/releases/download/v#{version}/nerves_system_galileo-nerves-v#{version}.tar.gz"],
+    "https://github.com/nerves-project/nerves_system_galileo/releases/download/v#{version}/nerves_system_galileo-v#{version}.tar.gz"],
   build_platform: Nerves.System.Platforms.BR,
   build_config: [
     defconfig: "nerves_defconfig"
