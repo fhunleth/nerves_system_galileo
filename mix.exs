@@ -21,8 +21,8 @@ defmodule NervesSystemGalileo.Mixfile do
 
   defp deps do
     [{:nerves_system, "~> 0.1.4"},
-     #{:nerves_system_br, github: "nerves-project/nerves_system_br", ref: "6c6702ecfdea59bfb248ff4590cb0532419b5855"},
-     {:nerves_system_br, "~> 0.6.0"},
+     {:nerves_system_br, github: "nerves-project/nerves_system_br", ref: "3759c4af12d4ce67d4ec60851d842d64f41e9f60"},
+     #{:nerves_system_br, "~> 0.6.0"},
      {:nerves_toolchain_i586_unknown_linux_gnu, "~> 0.6.0"}]
   end
 
@@ -34,7 +34,7 @@ defmodule NervesSystemGalileo.Mixfile do
 
   defp package do
     [maintainers: ["Frank Hunleth", "Justin Schneck"],
-     files: ["LICENSE", "mix.exs", "nerves_defconfig", "nerves.exs", "README.md", "VERSION", "erlinit.config"],
+     files: ["LICENSE", "mix.exs", "nerves_defconfig", "nerves.exs", "README.md", "VERSION", "rootfs-additions"],
      licenses: ["Apache 2.0"],
      links: %{"Github" => "https://github.com/nerves-project/nerves_system_galileo"}]
   end
