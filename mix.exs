@@ -21,7 +21,7 @@ defmodule NervesSystemGalileo.Mixfile do
 
   defp deps do
     [{:nerves_system, "~> 0.1.4"},
-     {:nerves_system_br, github: "nerves-project/nerves_system_br", ref: "3759c4af12d4ce67d4ec60851d842d64f41e9f60"},
+     {:nerves_system_br, github: "nerves-project/nerves_system_br", ref: "4ef4fa3a8203535d5b14d92d2ec3ff1973daf929"},
      #{:nerves_system_br, "~> 0.6.0"},
      {:nerves_toolchain_i586_unknown_linux_gnu, "~> 0.6.0"}]
   end
