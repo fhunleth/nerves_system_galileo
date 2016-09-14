@@ -23,7 +23,14 @@ defmodule NervesSystemGalileo.Mixfile do
     [{:nerves_system, "~> 0.1.4"},
       #{:nerves_system_br, "~> 0.6.1"},
      {:nerves_system_br, github: "nerves-project/nerves_system_br", tag: "26145be1d313387cdd3cefb7c233fedde806e727"},
-     {:nerves_toolchain_i586_unknown_linux_gnu, "~> 0.6.0"}]
+     {:nerves_toolchain_i586_unknown_linux_gnu,
+         github: "nerves-project/toolchains",
+         sparse: "nerves_toolchain_i586_unknown_linux_gnu"},
+     {:nerves_toolchain_ctng,
+         github: "nerves-project/toolchains",
+         sparse: "nerves_toolchain_ctng",
+         override: true}
+     ]
   end
 
   defp description do
