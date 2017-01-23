@@ -9,10 +9,11 @@ defmodule NervesSystemGalileo.Mixfile do
     [app: :nerves_system_galileo,
      version: @version,
      elixir: "~> 1.2",
-     compilers: Mix.compilers ++ [:nerves_system],
+     compilers: Mix.compilers ++ [:nerves_package],
      description: description(),
      package: package(),
-     deps: deps()]
+     deps: deps(),
+     aliases: ["deps.precompile": ["nerves.env", "deps.precompile"]]]
   end
 
   def application do
@@ -20,8 +21,9 @@ defmodule NervesSystemGalileo.Mixfile do
   end
 
   defp deps do
-    [{:nerves_system, "~> 0.1.4"},
-     {:nerves_system_br, "~> 0.7.0"},
+    [{:nerves, "~> 0.4.0"},
+      #{:nerves_system_br, "~> 0.8.1"},
+     {:nerves_system_br, github: "nerves-project/nerves_system_br", branch: "br-2016.11.1-bump"},
      {:nerves_toolchain_i586_unknown_linux_gnu, "~> 0.7.0"}]
   end
 
