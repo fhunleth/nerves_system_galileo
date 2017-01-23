@@ -10,9 +10,9 @@ defmodule NervesSystemGalileo.Mixfile do
      version: @version,
      elixir: "~> 1.2",
      compilers: Mix.compilers ++ [:nerves_system],
-     description: description,
-     package: package,
-     deps: deps]
+     description: description(),
+     package: package(),
+     deps: deps()]
   end
 
   def application do
