@@ -22,9 +22,9 @@ defmodule NervesSystemGalileo.Mixfile do
 
   defp deps do
     [{:nerves, "~> 0.4.0"},
-      #{:nerves_system_br, "~> 0.8.1"},
-     {:nerves_system_br, github: "nerves-project/nerves_system_br", branch: "br-2016.11.1-bump"},
-     {:nerves_toolchain_i586_unknown_linux_gnu, "~> 0.7.0"}]
+     {:nerves_system_br, "~> 0.9.0"},
+     #{:nerves_system_br, github: "nerves-project/nerves_system_br", branch: "br-2016.11.1-bump"},
+     {:nerves_toolchain_i586_unknown_linux_gnu, "~> 0.9.0"}]
   end
 
   defp description do
