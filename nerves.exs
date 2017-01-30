@@ -5,16 +5,27 @@ version =
   |> File.read!
   |> String.strip
 
-config :nerves_system_galileo, :nerves_env,
+pkg = :nerves_system_galileo
+
+config pkg, :nerves_env,
   type: :system,
   version: version,
-  mirrors: [
-    "https://github.com/nerves-project/nerves_system_galileo/releases/download/v#{version}/nerves_system_galileo-v#{version}.tar.gz",
-    "https://s3.amazonaws.com/nerves/artifacts/nerves_system_galileo-#{version}.tar.gz"],
-  build_platform: Nerves.System.Platforms.BR,
-  build_config: [
+  compiler: :nerves_package,
+  artifact_url: [
+    "https://github.com/nerves-project/#{pkg}/releases/download/v#{version}/#{pkg}-v#{version}.tar.gz",
+  ],
+  platform: Nerves.System.BR,
+  platform_config: [
     defconfig: "nerves_defconfig",
-    package_files: [
-      "rootfs-additions"
-    ]
+  ],
+  checksum: [
+    "grub.cfg",
+    "linux-3.8.config",
+    "rootfs-additions",
+    "fwup.conf",
+    "nerves_defconfig",
+    "nerves.exs",
+    "post-build.sh",
+    "post-createfs.sh",
+    "VERSION"
   ]
